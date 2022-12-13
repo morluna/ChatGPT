@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  ChatApp
+
+  Created by Marcos Ortiz on 12/13/22.
+  
+*/
+
+"General.Reload" = "Ladda om";
+"General.Quit" = "Avsluta";
+"General.OpenInBrowser" = "Öppna i webbläsaren";
+"General.ViewOnGithub" = "Visa på Github";
+
+"Error.NoInternet.Message" = "Inte ansluten till nätverket";

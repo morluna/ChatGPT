@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  ChatApp
+
+  Created by Marcos Ortiz on 12/13/22.
+  
+*/
+
+"General.Reload" = "Reload";
+"General.Quit" = "Quit";
+"General.OpenInBrowser" = "Open in browser";
+"General.ViewOnGithub" = "View on Github";
+
+"Error.NoInternet.Title" = "Not connected to network";

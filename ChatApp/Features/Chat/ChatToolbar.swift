@@ -29,21 +29,21 @@ public struct ChatToolbar: View {
     public var body: some View {
         HStack {
             Menu {
-                Button("Quit") {
+                Button("General.Quit") {
                     NSApplication.shared.terminate(nil)
                 }
 
-                Button("Reload") {
+                Button("General.Reload") {
                     reloadAction()
                 }
 
-                Button("Open in browser") {
+                Button("General.OpenInBrowser") {
                     openURL(chatURL)
                 }
 
                 Divider()
 
-                Button("View on Github") {
+                Button("General.ViewOnGithub") {
                     openURL(githubURL)
                 }
             } label: {

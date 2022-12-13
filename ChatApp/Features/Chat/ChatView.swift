@@ -25,7 +25,7 @@ public struct ChatView: View {
             ProgressView()
                 .progressViewStyle(.circular)
         case .disconnected:
-            Label("Not connected to network", systemImage: "network")
+            Label("Error.NoInternet.Message", systemImage: "network")
                 .font(.headline)
         case .ready:
             chatWebView()
