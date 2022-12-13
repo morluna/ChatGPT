@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DE20C3B2948E2DE00BD49F3 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE20C3A2948E2DE00BD49F3 /* Padding.swift */; };
 		8DF6CE072947C64400EBAD00 /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6CE062947C64400EBAD00 /* ChatApp.swift */; };
 		8DF6CE092947C64400EBAD00 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6CE082947C64400EBAD00 /* ChatView.swift */; };
 		8DF6CE0B2947C64500EBAD00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF6CE0A2947C64500EBAD00 /* Assets.xcassets */; };
 		8DF6CE0F2947C64500EBAD00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF6CE0E2947C64500EBAD00 /* Preview Assets.xcassets */; };
 		8DF6CE162947C68500EBAD00 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6CE152947C68500EBAD00 /* WebView.swift */; };
 		8DF6CE182947C69100EBAD00 /* ChatConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6CE172947C69100EBAD00 /* ChatConfiguration.swift */; };
+		8DF6CE1B2948B8C700EBAD00 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6CE1A2948B8C700EBAD00 /* Reachability.swift */; };
+		8DF6CE1D2948DC6C00EBAD00 /* ChatToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6CE1C2948DC6C00EBAD00 /* ChatToolbar.swift */; };
+		8DF6CE1F2948DDB300EBAD00 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6CE1E2948DDB300EBAD00 /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8DE20C3A2948E2DE00BD49F3 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		8DF6CE032947C64400EBAD00 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF6CE062947C64400EBAD00 /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		8DF6CE082947C64400EBAD00 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -24,6 +29,10 @@
 		8DF6CE0E2947C64500EBAD00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8DF6CE152947C68500EBAD00 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		8DF6CE172947C69100EBAD00 /* ChatConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatConfiguration.swift; sourceTree = "<group>"; };
+		8DF6CE192947DA3200EBAD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8DF6CE1A2948B8C700EBAD00 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8DF6CE1C2948DC6C00EBAD00 /* ChatToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatToolbar.swift; sourceTree = "<group>"; };
+		8DF6CE1E2948DDB300EBAD00 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +65,11 @@
 		8DF6CE052947C64400EBAD00 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				8DF6CE062947C64400EBAD00 /* ChatApp.swift */,
-				8DF6CE082947C64400EBAD00 /* ChatView.swift */,
-				8DF6CE152947C68500EBAD00 /* WebView.swift */,
-				8DF6CE172947C69100EBAD00 /* ChatConfiguration.swift */,
-				8DF6CE0A2947C64500EBAD00 /* Assets.xcassets */,
+				8DF6CE192947DA3200EBAD00 /* Info.plist */,
 				8DF6CE0C2947C64500EBAD00 /* ChatApp.entitlements */,
+				8DF6CE212948DE3400EBAD00 /* Features */,
+				8DF6CE202948DE2A00EBAD00 /* Utilities */,
+				8DF6CE222948DE4200EBAD00 /* UI */,
 				8DF6CE0D2947C64500EBAD00 /* Preview Content */,
 			);
 			path = ChatApp;
@@ -73,6 +81,44 @@
 				8DF6CE0E2947C64500EBAD00 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8DF6CE202948DE2A00EBAD00 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8DF6CE1A2948B8C700EBAD00 /* Reachability.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8DF6CE212948DE3400EBAD00 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8DF6CE062947C64400EBAD00 /* ChatApp.swift */,
+				8DF6CE252948DF4500EBAD00 /* Chat */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8DF6CE222948DE4200EBAD00 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8DF6CE0A2947C64500EBAD00 /* Assets.xcassets */,
+				8DF6CE152947C68500EBAD00 /* WebView.swift */,
+				8DE20C3A2948E2DE00BD49F3 /* Padding.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8DF6CE252948DF4500EBAD00 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				8DF6CE172947C69100EBAD00 /* ChatConfiguration.swift */,
+				8DF6CE1E2948DDB300EBAD00 /* ChatViewModel.swift */,
+				8DF6CE082947C64400EBAD00 /* ChatView.swift */,
+				8DF6CE1C2948DC6C00EBAD00 /* ChatToolbar.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DF6CE162947C68500EBAD00 /* WebView.swift in Sources */,
+				8DF6CE1F2948DDB300EBAD00 /* ChatViewModel.swift in Sources */,
 				8DF6CE092947C64400EBAD00 /* ChatView.swift in Sources */,
 				8DF6CE182947C69100EBAD00 /* ChatConfiguration.swift in Sources */,
+				8DF6CE1B2948B8C700EBAD00 /* Reachability.swift in Sources */,
 				8DF6CE072947C64400EBAD00 /* ChatApp.swift in Sources */,
+				8DF6CE1D2948DC6C00EBAD00 /* ChatToolbar.swift in Sources */,
+				8DE20C3B2948E2DE00BD49F3 /* Padding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +327,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ChatGPT;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_LSUIElement = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -317,8 +369,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ChatGPT;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_LSUIElement = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

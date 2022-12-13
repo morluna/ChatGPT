@@ -8,19 +8,23 @@
 import SwiftUI
 
 public final class ChatConfiguration: ObservableObject {
-    public let url: URL
+    public let chatURL: URL
     public var menuIcon: Image
 
     public init(
         url: URL,
         menuIcon: Image = Image("openai.icon")
     ) {
-        self.url = url
+        self.chatURL = url
         self.menuIcon = menuIcon
     }
 
     public var defaultWindowSize: CGSize {
         CGSize(width: 450, height: 600)
+    }
+
+    public var githubURL: URL {
+        URL(string: "https://github.com/morluna/ChatGPT")!
     }
 }
 
@@ -29,9 +33,7 @@ public extension ChatConfiguration {
         url: URL(string: "https://chat.openai.com/chat/")!
     )
 
-    #if DEBUG
     static let debug = ChatConfiguration(
         url: URL(string: "https://www.google.com")!
     )
-    #endif
 }

@@ -7,12 +7,15 @@
 
 import SwiftUI
 import WebKit
+import Combine
 
 public struct WebView {
     private let url: URL
+    private let reload: Binding<Bool>?
 
-    public init(url: URL) {
+    public init(url: URL, reload: Binding<Bool>? = nil) {
         self.url = url
+        self.reload = reload
     }
 
     public func makeCoordinator() -> Coordinator {
@@ -22,13 +25,25 @@ public struct WebView {
 
 private extension WebView {
     func makeWebView() -> WKWebView {
-        WKWebView()
+        let webView = WKWebView()
+
+        let request = URLRequest(url: url)
+        webView.load(request)
+
+        return webView
     }
 
     func updateWebView(_ webView: WKWebView, context: Context) {
-        let request = URLRequest(url: url)
         webView.navigationDelegate = context.coordinator
-        webView.load(request)
+
+        Task {
+            await MainActor.run {
+                if reload?.wrappedValue == true {
+                    reload?.wrappedValue = false
+                    webView.reload()
+                }
+            }
+        }
     }
 }
 
@@ -68,6 +83,6 @@ public extension WebView {
 
 struct WebView_Previews: PreviewProvider {
     static var previews: some View {
-        WebView(url: ChatConfiguration.debug.url)
+        WebView(url: ChatConfiguration.debug.chatURL)
     }
 }
