@@ -11,4 +11,4 @@
 "General.OpenInBrowser" = "Open in browser";
 "General.ViewOnGithub" = "View on Github";
 
-"Error.NoInternet.Title" = "Not connected to network";
+"Error.NoInternet.Message" = "Not connected to network";
