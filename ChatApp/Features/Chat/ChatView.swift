@@ -37,6 +37,9 @@ private extension ChatView {
     @ViewBuilder
     func chatWebView() -> some View {
         #if os(macOS)
+        // On macOS, it's not possible to pull-to-refresh the web content,
+        // so this toolbar adds a menu with common options such as
+        // Quit, Reload, Open in Browser
         VStack(spacing: .zero) {
             ChatToolbar(
                 chatURL: configuration.chatURL,
